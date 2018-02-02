@@ -22,7 +22,12 @@
             const content = 'Hello World'
             const myClassName = 'container'
 
-            const element = <div className={myClassName}>{content}</div>
+            const props = {
+                className: 'container',
+                children: 'Hello World'
+            }
+
+            const element = <div {...props} />
             ReactDOM.render(element, rootElement);
         </script>
     </body>
