@@ -11,13 +11,18 @@
         <div id="root"></div>
         <script type="text/babel">
             const rootElement = document.getElementById('root');
+            /*
             const element = React.createElement(
                 'div',
                 {
                   className: 'container',
                   children: 'Hello World'
                 }
-            );
+            );*/
+            const content = 'Hello World'
+            const myClassName = 'container'
+
+            const element = <div className={myClassName}>{content}</div>
             ReactDOM.render(element, rootElement);
         </script>
     </body>
