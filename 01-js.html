@@ -11,23 +11,15 @@
         <div id="root"></div>
         <script type="text/babel">
             const rootElement = document.getElementById('root');
-            /*
-            const element = React.createElement(
-                'div',
-                {
-                  className: 'container',
-                  children: 'Hello World'
-                }
-            );*/
-            const content = 'Hello World'
-            const myClassName = 'container'
+            const Message = props => <div>{props.msg}</div>
 
-            const props = {
-                className: 'container',
-                children: 'Hello World'
-            }
-
-            const element = <div {...props}> Hi Jordi </div>
+            const element = (
+             <div className="container">
+                 <Message msg="Hello World" />
+                 <Message msg="Goodbye World" />
+             </div>
+            )
+            
             ReactDOM.render(element, rootElement);
         </script>
     </body>
